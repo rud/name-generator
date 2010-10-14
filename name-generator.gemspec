@@ -10,4 +10,6 @@ Gem::Specification.new do |s|
 
   s.author  = 'Laust Rud Jacobsen'
   s.email   = 'rud@personal-it.dk'
+
+  s.add_dependency 'activesupport', '~> 3'
 end
