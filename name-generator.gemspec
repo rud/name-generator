@@ -8,8 +8,18 @@ Gem::Specification.new do |s|
   s.version = NameGenerator::VERSION
   s.license = 'MIT'
 
-  s.files      = Dir['lib/**/*.rb']
-  s.test_files = Dir['spec/**']
+  s.files = [
+    "lib/name-generator/main.rb",
+    "lib/name-generator/version.rb",
+    "lib/name-generator.rb",
+    "Rakefile",
+    "README.md",
+    "Gemfile"
+  ]
+  s.test_files = [
+    "spec/name-generator",
+    "spec/spec_helper.rb"
+  ]
 
   s.author  = 'Laust Rud Jacobsen'
   s.email   = 'laust@object.io'
