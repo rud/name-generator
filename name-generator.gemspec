@@ -1,4 +1,6 @@
-require 'lib/name-generator.rb'
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'name-generator/version'
 
 Gem::Specification.new do |s|
   s.name    = 'name-generator'
@@ -12,4 +14,5 @@ Gem::Specification.new do |s|
   s.email   = 'laust@object.io'
 
   s.add_dependency 'activesupport', '~> 3'
+  s.add_development_dependency 'rspec'
 end
