@@ -1,3 +1,4 @@
 .bundle
 .DS_Store
 name-generator-*.gem
+Gemfile.lock
