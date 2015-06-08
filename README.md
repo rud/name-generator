@@ -3,14 +3,16 @@
 
 Easily generate game-compatible names. This handy if you need a very large of slightly plausible fake names for things or places.
 
-Example usage:
+## Example usage
 
 Add to your `Gemfile`:
+
 ``` ruby
 gem 'name-generator'
 ```
 
 Use in your code:
+
 ``` ruby
 generator = NameGenerator::Main.new
 puts generator.next_name
