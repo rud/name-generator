@@ -5,7 +5,7 @@ require 'name-generator/version'
 Gem::Specification.new do |s|
   s.name    = 'name-generator'
   s.summary = 'Easily generate game-compatible names'
-  s.version = NameGenerator::VERSION::STRING
+  s.version = NameGenerator::VERSION
   s.license = 'MIT'
 
   s.files      = Dir['lib/**/*.rb']
