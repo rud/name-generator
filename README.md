@@ -11,7 +11,7 @@ gem 'name-generator'
 ```
 
 Use in your code:
-```
+``` ruby
 generator = NameGenerator::Main.new
 puts generator.next_name
 # => "Foonqtar"
