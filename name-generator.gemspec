@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir['spec/**']
 
   s.author  = 'Laust Rud Jacobsen'
-  s.email   = 'rud@personal-it.dk'
+  s.email   = 'laust@object.io'
 
   s.add_dependency 'activesupport', '~> 3'
 end
