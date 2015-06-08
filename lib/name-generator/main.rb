@@ -1,6 +1,3 @@
-require 'active_support/core_ext/array/random_access'
-require 'active_support/core_ext/string/inflections'
-
 # This is a ruby-rewrite of "namegen.py" by Laust Rud Jacobsen (2010).
 
 # From the original source-file (http://www.ailis.de/~k/archives/28-Name-Generator.html)
@@ -8,7 +5,6 @@ require 'active_support/core_ext/string/inflections'
 # This class generates names in the quality of the planet names used in
 # the classic game Elite. The algorithm used in this class comes from
 # the Mote project (http://mote.sourceforge.net/)
-
 
 module NameGenerator
   class Main
@@ -18,10 +14,16 @@ module NameGenerator
       until sensible_name?(name)
         name = generate_name(syllables)
       end
-      name.titlecase
+      titlecase(name)
     end
 
     private
+
+    def titlecase name
+      name[0] = name[0].upcase
+      name
+    end
+
     def generate_name syllables
       name = (1...syllables).collect do
         digraphs.sample

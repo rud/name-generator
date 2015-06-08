@@ -13,6 +13,5 @@ Gem::Specification.new do |s|
   s.author  = 'Laust Rud Jacobsen'
   s.email   = 'laust@object.io'
 
-  s.add_dependency 'activesupport', '~> 3'
   s.add_development_dependency 'rspec'
 end
