@@ -6,7 +6,7 @@ describe NameGenerator::Main do
   end
 
   it "should generate a predictable name" do
-    subject.next_name.should == 'Coutbo'
+    expect(subject.next_name).to eq('Coutbo')
   end
 
   it "should be repeatable for a bunch of names" do
@@ -15,7 +15,11 @@ describe NameGenerator::Main do
       names << subject.next_name
     end
 
-    names.should == ["Coutbo", "Teedac", "Usax", "Orfaes", "Ciin", "Diorud", "Deboba", "Gaqtac", "Sacre", "Deoi", "Utitusar",
-      "Foonqtar", "Gini", "Haos", "Nedre", "Udgu", "Bahaguga", "Tugehe", "Qtmibi", "Lace"]
+    expect(names).to eq([
+      "Coutbo", "Teedac", "Usax", "Orfaes", "Ciin", "Diorud",
+      "Deboba", "Gaqtac", "Sacre", "Deoi", "Utitusar",
+      "Foonqtar", "Gini", "Haos", "Nedre", "Udgu", "Bahaguga",
+      "Tugehe", "Qtmibi", "Lace"
+    ])
   end
 end
