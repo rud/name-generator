@@ -7,24 +7,22 @@
 # the Mote project (http://mote.sourceforge.net/)
 
 module NameGenerator
+  # Your one stop location for generating random names
   class Main
-
-    def next_name syllables = random_syllable_count
+    def next_name(syllables = random_syllable_count)
       name = generate_name(syllables)
-      until sensible_name?(name)
-        name = generate_name(syllables)
-      end
+      name = generate_name(syllables) until sensible_name?(name)
       titlecase(name)
     end
 
     private
 
-    def titlecase name
+    def titlecase(name)
       name[0] = name[0].upcase
       name
     end
 
-    def generate_name syllables
+    def generate_name(syllables)
       name = (1...syllables).collect do
         digraphs.sample
       end
@@ -33,8 +31,8 @@ module NameGenerator
       name.join
     end
 
-    def sensible_name? name
-      name !=~ /.*[aeiou]{3}.*/i  # reject if at least three vowels in a row
+    def sensible_name?(name)
+      name != ~ /.*[aeiou]{3}.*/i  # reject if at least three vowels in a row
     end
 
     def random_syllable_count
@@ -42,23 +40,15 @@ module NameGenerator
     end
 
     def digraphs
-      [
-         "a", "ac", "ad", "ar", "as", "at", "ax", "ba", "bi", "bo", "ce", "ci",
-        "co", "de", "di",  "e", "ed", "en", "es", "ex", "fa", "fo", "ga", "ge",
-        "gi", "gu", "ha", "he", "in", "is", "it", "ju", "ka", "ky", "la", "le",
-        "le", "lo", "mi", "mo", "na", "ne", "ne", "ni", "no",  "o", "ob", "oi",
-        "ol", "on", "or", "or", "os", "ou", "pe", "pi", "po", "qt", "re", "ro",
-        "sa", "se", "so", "ta", "te", "ti", "to", "tu", "ud", "um", "un", "us",
-        "ut", "va", "ve", "ve", "za", "zi"
-      ]
+      %w(a ac ad ar as at ax ba bi bo ce ci co de di e ed en es ex fa fo
+         ga ge gi gu ha he in is it ju ka ky la le le lo mi mo na ne ne ni
+         no o ob oi ol on or or os ou pe pi po qt re ro sa se so ta te ti
+         to tu ud um un us ut va ve ve za zi)
     end
 
     def trigraphs
-      [
-        "cla", "clu", "cra", "cre", "dre", "dro", "pha", "phi", "pho", "sha",
-        "she", "sta", "stu", "tha", "the", "thi", "thy", "tri"
-      ]
+      %w(cla clu cra cre dre dro pha phi pho sha she sta stu tha the thi
+         thy tri)
     end
-
   end
 end

@@ -9,16 +9,16 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
 
   s.files = [
-    "lib/name-generator/main.rb",
-    "lib/name-generator/version.rb",
-    "lib/name-generator.rb",
-    "Rakefile",
-    "README.md",
-    "Gemfile"
+    'lib/name-generator/main.rb',
+    'lib/name-generator/version.rb',
+    'lib/name-generator.rb',
+    'Rakefile',
+    'README.md',
+    'Gemfile'
   ]
   s.test_files = [
-    "spec/name-generator",
-    "spec/spec_helper.rb"
+    'spec/name-generator',
+    'spec/spec_helper.rb'
   ]
 
   s.author  = 'Laust Rud Jacobsen'
@@ -26,4 +26,5 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
+  s.add_development_dependency 'rubocop'
 end
