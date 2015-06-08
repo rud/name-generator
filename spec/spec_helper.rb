@@ -1,1 +1,4 @@
-require 'lib/name-generator'
+require 'bundler'
+Bundler.setup
+
+require 'name-generator'
