@@ -14,5 +14,6 @@ Gem::Specification.new do |s|
   s.author  = 'Laust Rud Jacobsen'
   s.email   = 'laust@object.io'
 
+  s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
 end
