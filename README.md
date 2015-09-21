@@ -17,6 +17,18 @@ Use in your code:
 generator = NameGenerator::Main.new
 puts generator.next_name
 # => "Foonqtar"
+
+10.times { puts generator.next_name }
+Ties
+Hamiedla
+Artoni
+Folo
+Acendro
+Jula
+Tuveqtpha
+Gubouna
+Axlesone
+Oisova
 ```
 
 For more examples see [the specs](spec/name-generator/main_spec.rb).
