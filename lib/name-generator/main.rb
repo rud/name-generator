@@ -32,7 +32,7 @@ module NameGenerator
     end
 
     def sensible_name?(name)
-      name != ~ /.*[aeiou]{3}.*/i  # reject if at least three vowels in a row
+      name != ~ /.*[aeiou]{3}.*/i # reject if at least three vowels in a row
     end
 
     def random_syllable_count
