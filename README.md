@@ -14,6 +14,11 @@ gem 'name-generator'
 Use in your code:
 
 ``` ruby
+$ irb
+
+require 'bundler'
+Bundler.setup
+
 require 'name_generator'
 
 generator = NameGenerator::Main.new
