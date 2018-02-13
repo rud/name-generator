@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
-# Backwards compatible file, auto-require the new name:
+warn 'The file "name-generator" is deprecated, ' \
+     'please require "name_generator" instead going forward. '
 
+# For your convenience
 require 'name_generator'

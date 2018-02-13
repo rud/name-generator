@@ -15,9 +15,7 @@ Use in your code:
 
 ``` ruby
 $ irb
-
-require 'bundler'
-Bundler.setup
+require 'bundler'; Bundler.setup; nil
 
 require 'name_generator'
 
