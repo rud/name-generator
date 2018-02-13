@@ -2,7 +2,7 @@
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'name-generator/version'
+require 'name_generator/version'
 
 Gem::Specification.new do |s|
   s.name    = 'name-generator'
@@ -11,15 +11,16 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
 
   s.files = [
-    'lib/name-generator/main.rb',
-    'lib/name-generator/version.rb',
+    'lib/name_generator/main.rb',
+    'lib/name_generator/version.rb',
+    'lib/name_generator.rb',
     'lib/name-generator.rb',
     'Rakefile',
     'README.md',
     'Gemfile'
   ]
   s.test_files = [
-    'spec/name-generator',
+    'spec/name_generator',
     'spec/spec_helper.rb'
   ]
 

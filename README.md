@@ -14,7 +14,8 @@ gem 'name-generator'
 Use in your code:
 
 ``` ruby
-require 'name-generator'
+require 'name_generator'
+
 generator = NameGenerator::Main.new
 puts generator.next_name
 # => "Foonqtar"
@@ -32,4 +33,4 @@ Axlesone
 Oisova
 ```
 
-For more examples see [the specs](spec/name-generator/main_spec.rb).
+For more examples see [the specs](spec/name_generator/main_spec.rb).
