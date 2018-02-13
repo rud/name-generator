@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe NameGenerator::Main do
@@ -15,8 +17,8 @@ describe NameGenerator::Main do
       names << subject.next_name
     end
 
-    expect(names).to eq(%w(Coutbo Teedac Usax Orfaes Ciin Diorud Deboba
+    expect(names).to eq(%w[Coutbo Teedac Usax Orfaes Ciin Diorud Deboba
                            Gaqtac Sacre Deoi Utitusar Foonqtar Gini Haos
-                           Nedre Udgu Bahaguga Tugehe Qtmibi Lace))
+                           Nedre Udgu Bahaguga Tugehe Qtmibi Lace])
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'bundler/setup'
 Bundler.setup
 require 'bundler/gem_tasks'
@@ -18,7 +20,7 @@ namespace :test do
       '--fail-level', 'W'
     ]
     # only show the files with failures
-    task.formatters = %w(clang offenses)
+    task.formatters = %w[clang offenses]
     # silence "Running RuboCop..." output:
     task.verbose = ENV['CI']
     # abort rake on failure
